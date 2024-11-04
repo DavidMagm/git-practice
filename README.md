@@ -14,3 +14,9 @@ Bien git reset tambien nos ayuda a volver en el tiempo pero a diferencia de **ch
 
 ### git rm 
 Por lo general la personas confunden *git rm* y *git reset* es simple git rm no nos permite retorcerder a versiones anteriores sino que elimina un archivo *git rm [name_file]* lo elimina de git para que ahora git no lo pueda traquear *git rm --cached [name_file]* sirve para esto lo quita del stagin y del historial de los commit, ahoara si quisieras borrar esta archivo no solo de git tambien de tu disco duro usas *git rm --force [name_file]*   
+
+## Git merge
+ahora vamos a fucionar dos ramas para traer los cambios que he realizado en otra rama pero primero debemos ver que es una rama
+
+### ramas en git 
+cuando escribimos los commit van creando un registro que podemos ver *git log* todos estos commit se guardan en la rama master o main que es la rama principal, claro si queremos trabajar algo que no este en nuestra rama principal puede ser un bug o una funcionalidad para eso creamos otra rama con *git branch [name]* como en este caso con el footer donde vamos a cambiar el **footer** para despues hacer un merge desde el main para traerme lo del footer *git merge footer* recordando que estamos en la rama main se va a unir el ultimo commit del footer y del main

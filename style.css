@@ -42,3 +42,21 @@ h2 {
   font-size: large;
   color: aliceblue;
 }
+#title-footer {
+  text-align: start;
+  margin-left: 0;
+}
+.container-footer-link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 50%;
+  margin-left: 34px;
+  padding: 12px;
+  box-shadow: 15px -12px 15px -6px rgba(0,0,0,0.45);
+  border-radius: 8px;
+}
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
