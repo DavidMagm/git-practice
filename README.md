@@ -20,3 +20,17 @@ ahora vamos a fucionar dos ramas para traer los cambios que he realizado en otra
 
 ### ramas en git 
 cuando escribimos los commit van creando un registro que podemos ver *git log* todos estos commit se guardan en la rama master o main que es la rama principal, claro si queremos trabajar algo que no este en nuestra rama principal puede ser un bug o una funcionalidad para eso creamos otra rama con *git branch [name]* como en este caso con el footer donde vamos a cambiar el **footer** para despues hacer un merge desde el main para traerme lo del footer *git merge footer* recordando que estamos en la rama main se va a unir el ultimo commit del footer y del main
+
+## **Llaves publicas**
+imaginemos que Pablo le quiere mandar un mesaje a Juan y el mensaje es *secreto* si se lo envia por internet es sencillo que alguien lo intercepte y lo abra asi que le pondemos poner un password al mensaje pero como mandamos ese password si lo mandamos por internet tambien lo pueden interceptar entoces utilizamos un ***cifrado simetrico de un solo camino***
+
+### Llaves
+para hacer el ***cifrado simetrico de un solo camino*** se necesitan dos llaves un publica y otra privada, estas dos llaves estan vinculadas matematicamente, al estar vinculadas lo que Pablo cifre con su llave publica lo puede abrir con su llave privada. Entonces el proceso de envio del mensaje se da asi Pablo le envia por internet su llave publica a Juan, este va a clonar la llave que le enviaron y mediante un proceso matematico de la llave publica va a convertir el mensaje *secreto* en un mensaje cifrado, y Juan le envia el mensaje a Pablo ahoro lo unico que debe hacer Pablo es copiar el mensaje cifrado y utilizar su llave privada para desencriptarlo con esto pueden Pablo y Juan mandar mensajes secretos por medios abiertos sin que un hacker pueda atrapar los mensajes
+
+<image src="./assects/llaves.webp" alt="llaves_publicas_privadas">
+
+cretidos de Angelo Paul Yenque
+
+Todo esto para hablar el SSH por cierto la instalacion de ssh TODOS la buscan en google para configurarla en su entorno local
+## Github
+bueno pero pqra que sirve toda esta configuracion de llaves SSH para concetarte de manera remota de git a github (si ya creaste tu llave y pegaste la lleve publica en las configuraciones de git) creas tu repositorio y con la ruta de ssh que se encuetra en la pestaña clonar repositorio vas a tu proyecto y pones *git remote add origin [url_clone_repository]* con *git remote -v* podes ver si ya se configura la ruta que seleccionaste para mandar los cambios de mi repositorio local a mi repositorio de github pongo *git push origin main* es importante poner el nombre main o de la rama que quieras ya que en tu entorno local puedes tener muchas ramas claro antes de dar el push es buena practica traer lo que se encuentra en tu repositorio en github con *git pull origin main* 
