@@ -34,3 +34,18 @@ cretidos de Angelo Paul Yenque
 Todo esto para hablar el SSH por cierto la instalacion de ssh TODOS la buscan en google para configurarla en su entorno local
 ## Github
 bueno pero pqra que sirve toda esta configuracion de llaves SSH para concetarte de manera remota de git a github (si ya creaste tu llave y pegaste la lleve publica en las configuraciones de git) creas tu repositorio y con la ruta de ssh que se encuetra en la pestaña clonar repositorio vas a tu proyecto y pones *git remote add origin [url_clone_repository]* con *git remote -v* podes ver si ya se configura la ruta que seleccionaste para mandar los cambios de mi repositorio local a mi repositorio de github pongo *git push origin main* es importante poner el nombre main o de la rama que quieras ya que en tu entorno local puedes tener muchas ramas claro antes de dar el push es buena practica traer lo que se encuentra en tu repositorio en github con *git pull origin main* 
+
+## Git Tags 
+No han notado que en muchos proyectos de codigo abierto encuentran v0.1, v.1.1 pues esto son las diferentes versiones del mismo todas estas referencias se hacen con tags, haces un *git log --all* y tomas el commit que quieres para que sea tu primera version con *git tag -a v0.1 -m "la primera version" [ID_COMMIT]* (la a es de add y en ves de v0.1 puedes ponerle el nombre que quieras como patito, lo que pasa es que las versiones pues siguen una nomenclatura estandar) para despues hacer *git push origin --tags* y aparecera en la esquina de nombre ramas al otro lado estaran los tags en Github 
+
+Pero ahora como los quitamos sencillo *git tag -d [NAME_TAG]* si no te acuerdas del nombre del tag con *git tag* te apareceran todos los tags y vuelves a enviar *git push origin --tags*, pero cuando revises tu github se seguira viendo en tag que quisiste borrar porque github guarda esa referencia para borrar esa referencia ejecutas *git push origin :refs/tags/[NAME_TAG]*
+
+Ahora hay un comando muy util para vizualizar de manera grafica el flujo de los commit *git log --all --graph --decorate --oneline* te dara este resultado
+
+<image src="./assects/Captura de pantalla 2024-11-05 194926.png" alt ="captura de la consola">
+
+pero existe una manera de hacer git de forma visual con *gitk* 
+
+<image src="./assects/Captura-gitk.png" alt ="captura-gitk">
+
+Pero porque usamos la console entoces teniendo esto porque los desarrolladores profesionales la utilizan ya que los programadores se mueven con la consola no te preocupes es por tu bien 
