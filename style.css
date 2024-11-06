@@ -4,6 +4,22 @@
 body {
   box-sizing: border-box;
   font-family: Inter;
+  margin: 0;
+}
+.principal-header {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  height: 42px;
+  padding: 8px 0 8px 34px;
+  background-color: #5af;
+  color: aliceblue;
+}
+.subtext-header {
+  font-size: medium;
+  color: aliceblue;
+  margin-left: 12px;
 }
 h1 {
   text-align: center;
