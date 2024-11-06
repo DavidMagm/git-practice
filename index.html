@@ -20,6 +20,11 @@
         <p class="content-text">
           El modelo de objeto de documento (DOM) es una interfaz de programación para HTML. Traduce el contenido de un documento HTML a un objeto estandarizado, al que los lenguajes de programación funcionales como JavaScript tienen facilidad de acceso y modificación. Debido a que la mayoría de los eventos de páginas web son impulsados por código que no es HTML, todas las páginas web dinámicas dependen del DOM para visualizarse y funcionar correctamente.
         </p>
+        <p class="content-text">
+          A través de JavaScript podemos interactuar con esta estructura y modificarla, y así alterar la representación en el navegador de nuestros documentos web, su estilo, su estructura, y su contenido.
+          La estructura del DOM tiene una jerarquía de árbol. Por eso es normal referirse a él como Árbol del DOM (DOM Tree).
+          En las ramas de ese árbol se encuentran nodos, cada uno de los cuales representa un elemento del documento.
+        </p>
       </div>
     </section>
    <br>
@@ -29,43 +34,138 @@
         <p class="content-text">
           En el diseño web, JavaScript se utiliza para controlar el comportamiento de las páginas. El DOM vincula JavaScript al código HTML fuente, lo que permite que JavaScript ejecute sus funciones en elementos HTML individuales. Esta interacción JavaScript-HTML crea la experiencia de un diseño web interactivo.
         </p>
-        <pre class="container-code"><code class="container-html">
+        <pre class="container-code">
+          <code class="container-html">
          &lt;html&gt;
           &lt;body&gt;
-            &lt;ul&gt;
-              &lt;li&gt;item 1&lt;/li&gt;
-              &lt;li&gt;item 2&lt;/li&gt;
-              &lt;li&gt;item 3&lt;/li&gt;
+            &lt;ul class="selector-ul"&gt;
+              &lt;li id="item-1"&gt;item 1&lt;/li&gt;
+              &lt;li id="item-2"&gt;item 2&lt;/li&gt;
+              &lt;li id="item-3"&gt;item 3&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/body&gt;
          &lt;/html&gt;
-        </code></pre>
+        </code>
+      </pre>
+      <p class="content-text">
+        El DOM no es un lenguaje de programación en sí, sino que es una Interfaz de Programación de Aplicaciones, o API, que forma parte del grupo de las llamadas APIs Web. Estas APIs permiten realizar diferentes tareas dentro de un contexto web utilizando JavaScript.
+        El DOM, entonces, es la API que le permite a JavaScript realizar una de sus tareas más importantes en el contexto de un documento web, como es la de controlar y manipular sus elementos.
+      </p>
       </div>
     </section>
     <br>
-    <section id="epoca_dorada_de_la_industria" class="main-section">
-      <h2>epoca dorada de la industria</h2>
-      <p>la epoca que mejor le fue a la industria fue la decada de los años 30</p><code></code>
-      <p>en esa epoca en particular no existia la televisión</p>
-      <p> <ol>
-        <li>el mago de oz</li>
-      </ol>
+    <section id="los_selectores" class="main-section">
+      <h2>Los selectores</h2>
+      <div class="info-container">
+        <p class="content-text">
+          En JavaScript contamos con una serie de métodos denominados selectores que nos permiten seleccionar elementos de nuestro documento, y luego tratarlos como objetos: consultar y modificar sus propiedades, e invocar sus métodos.
+        </p>
+        <pre class="container-code">
+        <code class="container-html">
+          // primer selector
+          const selector = document.getElementByClass(selector-ul)
+
+          // segundo selector
+          const item1 = document.getElementById(item-1)
+
+          // tercer selector
+          const selector2 = document.getquerySelector('.selector-ul')
+          const item2 = document.querySelector('#item-2')
+        </code>
+        </code>
+        </pre>
+
+        <h3>getElementByClass()</h3>
+        <p class="content-text">
+          Recibe como argumento un string, y retorna una colección de nodos cuyo atributo class se corresponda con él.
+        </p>
+        <pre class="container-code">
+          <code class="container-html">
+            var items = document.getElementsByClassName("item");
+  
+            items.length;  // → 3
+          </code>
+        </pre>
+
+        <h3>getElementById()</h3>
+        <p class="content-text">
+          Recibe como argumento un string, y retorna un único nodo cuyo atributo id se corresponda con eél. Cabe recordar que en HTML, un valor de atributo id debe ser utilizado solo una vez en cada documento.
+        </p>
+        <pre class="container-code">
+          <code class="container-html">
+            var primerItem = document.getElementById("primero");
+
+            primerItem;
+            // → &lt;li id="item-1" class="item"&gt;Item 1&lt;/li&gt;
+          </code>
+        </pre>
+
+        <h3>querySelector()</h3>
+        <p class="content-text">
+          Recibe como argumento un string que corresponde con uno o más selectores CSS separados por comas, y retorna el primer nodo que coincida con el selector.
+        </p>
+        <pre class="container-code">
+          <code class="container-html">
+            var primerItem = document.querySelector("ul li.item");
+
+            primerItem;
+            // → &lt;li id="item-1" class="item"&gt;Item 1&lt;/li&gt;
+          </code>
+        </pre>
+      </div>
     </section>
     <br>
-    <section id="influencias_del_cine_aleman" class="main-section"><h2>influencias del cine aleman</h2>
-      <p>el cine aleman tiene sus primeras apariciones a principio del siglo 20</p><code></code>
-      <p>toda esta influencia inspiro al cine negro con su peculiar forma de dar ambiente a una ciudad</p>
-    <p>  <ol>
-        <li>sgunda guerra mundial</li>
-      </ol> </p>
+    <section id="eventos_addeventlistener" class="main-section">
+      <h2>Eventos y addEventListener()</h2>
+      <div class="info-container">
+        <p class="content-text">
+          El addEventListener() método de la EventTarget interfaz establece una función que se llamará cada vez que el evento especificado se entregue al objetivo.
+          Los objetivos comunes son Element, o sus hijos, Document, y Window, pero el objetivo puede ser cualquier objeto que admita eventos (como IDBRequest).
+        </p>
+        <pre class="container-code">
+          <code class="container-html">
+            addEventListener(type, listener)
+            addEventListener(type, listener, options)
+          </code>   
+        </pre>
+        <p class="content-text">
+          El método addEventListener() funciona agregando una función o un objeto que implementa un handleEvent() función, a la lista de oyentes de eventos para el tipo de evento especificado en el EventTarget en el que se llama. Si la función u objeto ya está en la lista de oyentes de eventos para este objetivo, la función u objeto no se agrega por segunda vez.
+        </p>
+        <h3>Eventos</h3>
+        <p>
+          exiten muchos eventos como: onclick, onchange, onloand, onkeydown, onresize
+        </p>
+      </div>
     </section>
     <br>
-    <section id="fiebre_de_los_superheroes" class="main-section"><h2>fiebre de los superheroes</h2>
-      <p>los superheroes antes en la peliculas no eran tomados enserio en ninguna parte</p><code></code>
-      <p>hoy en dia paracen un reflejo de los dioses que el ser humano antiguo tenia en su mitologia</p>
-      <p> <ol>
-        <li>marvel studios</li>
-      </ol>
+    <section id="funciones_eventos" class="main-section">
+      <h2>Funciones de eventos</h2>
+      <div class="info-container">
+        <p class="content-text">
+          A menudo es deseable hacer referencia al elemento en el que se disparó el controlador de eventos como cuando se usa un controlador genérico para un conjunto de elementos similares.
+          Al conectar una función de controlador a un elemento usando addEventListener(), el valor de this dentro del controlador habrá una referencia a el elemento. Será lo mismo que el valor de la currentTarget propiedad de el argumento del evento que se pasa al controlador.
+        </p>
+        <pre class="container-code">
+          <code class="container-html">
+            my_element.addEventListener("click", function (e) {
+              console.log(this.className); // logs the className of my_element
+              console.log(e.currentTarget === this); // logs `true`
+            });
+          </code>
+        </pre>
+        <p class="content-text">
+          Otra forma de organizarla 
+        </p>
+        <pre class="container-code">
+          <code class="container-html">
+            selector.addEventListener("click", darClick); 
+            
+            function darClick () {
+              console.log("le diste click");
+            };
+          </code>
+        </pre>
+      </div>
     </section>
   
   </main>
