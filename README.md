@@ -49,3 +49,8 @@ pero existe una manera de hacer git de forma visual con *gitk*
 <image src="./assects/Captura-gitk.png" alt ="captura-gitk">
 
 Pero porque usamos la console entoces teniendo esto porque los desarrolladores profesionales la utilizan ya que los programadores se mueven con la consola no te preocupes es por tu bien 
+
+## Fusion de ramas
+cuando hacemos el *git push origin main* solo enviamos esa rama pero github no se entera que tenemos mas ramas como dev, header, footer a no ser que nosotros queramos enviarlas nos pasamos a la rama que queremos enviar con *git checkout [NAME_BRANCH]* y le haces el git push 
+
+En los ultimos commit que envie emule con si trabajaran dos diferentes personas en el proyecto uno en la rama header y el otro en dev, despues lo que hice es pasarme a mi rama main y darle *git merge header* para agregar sus cambios y de pues lo mosmo con dev, recordemos que en main debe estar lo que queremos que vaya a produccion por lo tanto el trabajo de hacer un code review debe hacerse por parte de los manager, lider del proyecto o el encargado en cuestion 
