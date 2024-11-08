@@ -61,3 +61,8 @@ Vamos a hablar de los pull request en un entorno de desarrollo profesional el ha
 Y el flujo de trabajo es sencillo ustedes crean una rama para el feature que estan desarrollando en nuestro caso podria ser header o footer y manda esa rama (le hacen un merge) a la rama **staging develop**, pero antes de hacer el merge se debe pasar por un lugar intermedio y ese lugar es el PULL REQUEST, el pull request permite que otros miembros del equipo revisen el codigo que escribiste y si les gusta pues le merge se ejecuta de forma automatica
 
 Hay que recordar que un PULL REQUEST no es una caracteristica de git sino de github, ademas que el pull request permite a personas que no son colaboradores del proyecto aportar en una rama siempre y cuando el proyecto sea publico, por cierto todo este proceso lo realizan los lideres de equipos o un grupo de personas con el nombre de **DevOps** 
+
+## .gitignore y archivos binarios
+En este repositorio he estado haciendo una mala practica que es subir archivos binarios, los archivos binarios no son igulaes a los archivos de texto plano como el index.html o el README.md de este proyecto pero las imagenes que estan en la carpeta assects si, y estas imagenes deberian ir en algo llamado un **content delivery network** 
+
+Y aqui vamos hacer esto de manera secilla lo primero es creando un archivo *.gitignore* y es muy importante el punto despues vamos a ir a *imgur.com* para subir las imagenes ahi y la url que nos de de cada imagen las ponemos en el *src* la url de iniciar con una **i** y despues ponerle la extencion de .jpg algo asi *src="http://[i].imgurURL.jpg"*
