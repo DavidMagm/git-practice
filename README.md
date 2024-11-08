@@ -27,10 +27,6 @@ imaginemos que Pablo le quiere mandar un mesaje a Juan y el mensaje es *secreto*
 ### Llaves
 para hacer el ***cifrado simetrico de un solo camino*** se necesitan dos llaves un publica y otra privada, estas dos llaves estan vinculadas matematicamente, al estar vinculadas lo que Pablo cifre con su llave publica lo puede abrir con su llave privada. Entonces el proceso de envio del mensaje se da asi Pablo le envia por internet su llave publica a Juan, este va a clonar la llave que le enviaron y mediante un proceso matematico de la llave publica va a convertir el mensaje *secreto* en un mensaje cifrado, y Juan le envia el mensaje a Pablo ahoro lo unico que debe hacer Pablo es copiar el mensaje cifrado y utilizar su llave privada para desencriptarlo con esto pueden Pablo y Juan mandar mensajes secretos por medios abiertos sin que un hacker pueda atrapar los mensajes
 
-<image src="./assects/llaves.webp" alt="llaves_publicas_privadas">
-
-cretidos de Angelo Paul Yenque
-
 Todo esto para hablar el SSH por cierto la instalacion de ssh TODOS la buscan en google para configurarla en su entorno local
 ## Github
 bueno pero pqra que sirve toda esta configuracion de llaves SSH para concetarte de manera remota de git a github (si ya creaste tu llave y pegaste la lleve publica en las configuraciones de git) creas tu repositorio y con la ruta de ssh que se encuetra en la pestaña clonar repositorio vas a tu proyecto y pones *git remote add origin [url_clone_repository]* con *git remote -v* podes ver si ya se configura la ruta que seleccionaste para mandar los cambios de mi repositorio local a mi repositorio de github pongo *git push origin main* es importante poner el nombre main o de la rama que quieras ya que en tu entorno local puedes tener muchas ramas claro antes de dar el push es buena practica traer lo que se encuentra en tu repositorio en github con *git pull origin main* 
@@ -42,11 +38,11 @@ Pero ahora como los quitamos sencillo *git tag -d [NAME_TAG]* si no te acuerdas 
 
 Ahora hay un comando muy util para vizualizar de manera grafica el flujo de los commit *git log --all --graph --decorate --oneline* te dara este resultado
 
-<image src="./assects/Captura de pantalla 2024-11-05 194926.png" alt ="captura de la consola">
+<image src="https://i.imgur.com/uT3ITgW.jpg" alt ="captura de la consola">
 
 pero existe una manera de hacer git de forma visual con *gitk* 
 
-<image src="./assects/Captura-gitk.png" alt ="captura-gitk">
+<image src="https://i.imgur.com/a/HMp8S0R.jpg" alt ="captura-gitk">
 
 Pero porque usamos la console entoces teniendo esto porque los desarrolladores profesionales la utilizan ya que los programadores se mueven con la consola no te preocupes es por tu bien 
 
