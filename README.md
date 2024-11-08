@@ -42,7 +42,7 @@ Ahora hay un comando muy util para vizualizar de manera grafica el flujo de los 
 
 pero existe una manera de hacer git de forma visual con *gitk* 
 
-<image src="https://i.imgur.com/a/HMp8S0R.jpg" alt ="captura-gitk">
+<image src="https://i.imgur.com/ZHpFoQV.jpg" alt ="captura-gitk">
 
 Pero porque usamos la console entoces teniendo esto porque los desarrolladores profesionales la utilizan ya que los programadores se mueven con la consola no te preocupes es por tu bien 
 
